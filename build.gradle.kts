@@ -4,13 +4,9 @@
  */
 
 group = "io.github.alexthegoood"
-version = "1.0.1"
+version = "1.0.2"
 
 tasks {
-    wrapper {
-        gradleVersion = "9.0.0"
-        distributionType = Wrapper.DistributionType.ALL
-    }
     withType<Jar> {
         enabled = false
     }

@@ -6,6 +6,7 @@
 plugins {
     lib.`kotlin-convention`
     lib.`shadow-convention`
+    lib.`publishing-convention`
     id("xyz.jpenilla.resource-factory-bukkit-convention") version "1.3.0"
 }
 

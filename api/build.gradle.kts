@@ -5,6 +5,7 @@
 
 plugins {
     lib.`kotlin-convention`
+    lib.`publishing-convention`
 }
 
 dependencies {
