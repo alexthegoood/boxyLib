@@ -4,7 +4,7 @@
  */
 
 group = "io.github.alexthegoood"
-version = "1.0.0"
+version = "1.0.1"
 
 tasks {
     wrapper {
