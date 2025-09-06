@@ -7,7 +7,9 @@ plugins {
     lib.`kotlin-convention`
     lib.`shadow-convention`
     lib.`publishing-convention`
-    id("xyz.jpenilla.resource-factory-bukkit-convention") version "1.3.0"
+    alias(libs.plugins.resources)
+    alias(libs.plugins.server.run)
+    alias(libs.plugins.server.paperweight)
 }
 
 repositories {
@@ -15,8 +17,8 @@ repositories {
 }
 
 dependencies {
+    paperweight.foliaDevBundle(libs.versions.server.version)
     api(project(":api"))
-    compileOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
 }
 
 tasks.shadowJar {

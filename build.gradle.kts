@@ -14,8 +14,6 @@ tasks {
 
 allprojects {
 
-    repositories.mavenCentral()
-
     tasks.withType<Jar> {
         archiveBaseName = "${rootProject.name}-${project.name}"
         archiveVersion = "${rootProject.version}"
