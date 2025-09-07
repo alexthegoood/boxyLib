@@ -4,7 +4,7 @@
  */
 
 group = "io.github.alexthegoood"
-version = "1.0.2"
+version = "1.1.0"
 
 tasks {
     withType<Jar> {
