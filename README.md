@@ -1,5 +1,6 @@
 # BOXYLIB
 A set of utilities for easy work with minecraft plugins, adventure components and other functions in the future.
+<br>The plugin also contains the standard Kotlin libraries that you can use in your plugin
 
 ## Usage
 1. Add repository:
