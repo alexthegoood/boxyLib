@@ -23,8 +23,6 @@ dependencies {
 
 tasks.shadowJar {
     archiveClassifier = null
-    val destination = "${rootProject.group}.boxylib"
-    relocate(destination, destination)
 }
 
 bukkitPluginYaml {
