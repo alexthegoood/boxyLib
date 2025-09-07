@@ -10,7 +10,7 @@ import net.kyori.adventure.text.ComponentLike
 import java.util.regex.Pattern
 
 /**
- * Replaces all occurrences of a regular expression [pattern] within this component with a [String] [replace].
+ * Replaces all occurrences of a regular expression [pattern] within this component with a [replace] string.
  *
  * @param pattern The regular expression pattern to be replaced.
  * @param replace The replacement string.
@@ -22,7 +22,7 @@ fun Component.replacePattern(
 ): Component = replaceText { builder -> builder.match(pattern).replacement(replace) }
 
 /**
- * Replaces all occurrences of a regular expression [pattern] within this component with a [ComponentLike] [replace].
+ * Replaces all occurrences of a regular expression [pattern] within this component with a [replace] component.
  *
  * @param pattern The regular expression pattern to be replaced.
  * @param replace The replacement component.
@@ -34,7 +34,7 @@ fun Component.replacePattern(
 ) : Component = replaceText { builder -> builder.match(pattern).replacement(replace) }
 
 /**
- * Replaces all occurrences of a regular expression [pattern] string within this component with a [String] [replace].
+ * Replaces all occurrences of a regular expression [pattern] string within this component with a [replace] string.
  *
  * @param pattern The regular expression pattern string to be replaced.
  * @param replace The replacement string.
@@ -46,7 +46,7 @@ fun Component.replacePattern(
 ) : Component = replacePattern(pattern.toPattern(), replace)
 
 /**
- * Replaces all occurrences of a regular expression [pattern] string within this component with a [ComponentLike] [replace].
+ * Replaces all occurrences of a regular expression [pattern] string within this component with a [replace] component.
  *
  * @param pattern The regular expression pattern string to be replaced.
  * @param replace The replacement component.

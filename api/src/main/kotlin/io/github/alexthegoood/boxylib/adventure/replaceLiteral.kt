@@ -9,7 +9,7 @@ import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.ComponentLike
 
 /**
- * Replaces all occurrences of a literal [literal] string within this component with a [String] [replace].
+ * Replaces all occurrences of a literal [literal] string within this component with a [replace] string.
  *
  * @param literal The literal string to be replaced.
  * @param replace The replacement string.
@@ -21,7 +21,7 @@ fun Component.replaceLiteral(
 ) : Component = replaceText { builder -> builder.matchLiteral(literal).replacement(replace) }
 
 /**
- * Replaces all occurrences of a literal [literal] string within this component with a [ComponentLike] [replace].
+ * Replaces all occurrences of a literal [literal] string within this component with a [replace] component.
  *
  * @param literal The literal string to be replaced.
  * @param replace The replacement component.

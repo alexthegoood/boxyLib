@@ -8,9 +8,9 @@ package io.github.alexthegoood.boxylib.plugin
 import org.bukkit.plugin.java.JavaPlugin
 
 /**
- * Checks if the server is running on a Folia.
+ * Checks if the server works on Folia.
  *
- * @return the server is Folia?
+ * @return True if the server work on Folia, otherwise false
  */
 fun JavaPlugin.isFolia() : Boolean = runCatching {
     Class.forName("io.papermc.paper.threadedregions.scheduler.RegionScheduler")

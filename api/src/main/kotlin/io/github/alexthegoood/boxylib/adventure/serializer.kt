@@ -42,7 +42,7 @@ fun Component.serialize(
  * Deserializes this [String] into a [Component] using the provided serializer.
  *
  * @param serializer The serializer to use for the deserialization. Defaults to [DEFAULT_SERIALIZER].
- * @return The deserialized component.
+ * @return The deserialized [Component] representation of the string.
  */
 fun String.deserialize(
     serializer: ComponentSerializer<Component, *, String> = DEFAULT_SERIALIZER
