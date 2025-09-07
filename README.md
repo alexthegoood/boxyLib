@@ -1,6 +1,5 @@
 # BOXYLIB
 A set of utilities for easy work with minecraft plugins, adventure components and other functions in the future.
-<hr>
 
 ## Usage
 1. Add repository:
@@ -35,7 +34,6 @@ A set of utilities for easy work with minecraft plugins, adventure components an
         <td>Utilities for easy work with Listener and so on.</td>
     </tr>
 </table>
-<hr>
 
 ## Functions & Examples
 
