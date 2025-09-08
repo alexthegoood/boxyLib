@@ -1,29 +1,9 @@
-# BOXYLIB
-A set of utilities for easy work with minecraft plugins, adventure components and other functions in the future.
+<h1>What is BOXYLIB?</h1>
+BoxyLib is a utility suite designed to simplify the development of Minecraft plugins, Adventure components, and other functions.
 <br>The plugin also contains the standard Kotlin libraries that you can use in your plugin
 
-## Usage
-1. Add repository:
-    ```kotlin
-    repositories {
-        maven("https://jitpack.io")
-    }
-    ```
-
-2. Add dependency:
-    ```kotlin
-    dependencies {
-        implementation("com.github.alexthegoood.boxyLib:{artifact}:{version}")
-    }
-    ```
-    or if you use a plugin
-    ```kotlin
-    dependencies {
-        compileOnly("com.github.alexthegoood.boxyLib:{artifact}:{version}")
-    }
-    ```
-
-### Artifacts:
+<h1>Installation</h1>
+<h3>Available artifacts</h3>
 <table>
     <tr><th>Module</th><th>Features</th></tr>
     <tr>
@@ -36,9 +16,22 @@ A set of utilities for easy work with minecraft plugins, adventure components an
     </tr>
 </table>
 
-## Functions & Examples
+<h3>Usage</h3>
+```kotlin
+repositories {
+    maven("https://jitpack.io")
+}
 
-#### Functions
+// For the plugin on the Minecraft server, use "compileOnly".
+// Note: You'll need to install BoxyLib on your server.
+dependencies {
+    implementation("com.github.alexthegoood.boxyLib:{artifact}:{version}")
+}
+```
+
+<h1>Functions & Examples</h1>
+
+<h3>Functions</h3>
 <table>
     <tr><th>Function</th><th>Description</th></tr>
     <tr>
@@ -66,8 +59,7 @@ A set of utilities for easy work with minecraft plugins, adventure components an
     </tr>
 </table>
 
-#### Examples
-
+<h3>Examples</h3>
 <details>
     <summary>registerListeners</summary>
 
@@ -125,9 +117,9 @@ fun myFunction() {
 
 ```kotlin
 /*
-You can use Serializers enum (Serializers.{PLAIN, LEGACY, MINI, GSON, JSON}).
-Example: serialize(Serializers.MINI); deserialize(Serializers.JSON).
-By default: Serializers.PLAIN
+    You can use Serializers enum (Serializers.{PLAIN, LEGACY, MINI, GSON, JSON}).
+    Example: serialize(Serializers.MINI); deserialize(Serializers.JSON).
+    By default: Serializers.PLAIN
  */
 fun mySerialization() {
     val mycomponent = Component.text("Hello world")
