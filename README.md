@@ -17,6 +17,7 @@ BoxyLib is a utility suite designed to simplify the development of Minecraft plu
 </table>
 
 <h3>Usage</h3>
+
 ```kotlin
 repositories {
     maven("https://jitpack.io")
