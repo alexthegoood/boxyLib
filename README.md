@@ -1,66 +1,45 @@
-<h1>What is BOXYLIB?</h1>
-BoxyLib is a utility suite designed to simplify the development of Minecraft plugins, Adventure components, and other functions.
-<br>The plugin also contains the standard Kotlin libraries that you can use in your plugin
+<h1>Introducing XLIB!</h1>
+XLIB simplifies plugin development for Minecraft for beginner developers using Kotlin. The library is designed so that developers don't have to worry about certain functions and can create and implement their ideas.
 
 <h1>Installation</h1>
-<h3>Available artifacts</h3>
+
+<h3>Choose the module you need</h3>
+<h6>(You will need to install the XLIB plugin on your server or implement it in your plugin.)</h6>
 <table>
-    <tr><th>Module</th><th>Features</th></tr>
+    <tr><th>Module</th><th>Description</th></tr>
     <tr>
-        <td><code>boxylib-api</code></td>
-        <td>Utilities for working with Kyori Adventure Components.</td>
+        <td><code>xlib-all</code></td>
+        <td>Contains all the functions from the modules listed below.</td>
+    </tr>
+<tr>
+        <td><code>xlib-adventure</code></td>
+        <td>Contains functions for working with Kyori Adventure Components.</td>
     </tr>
     <tr>
-        <td><code>boxylib-server</code></td>
-        <td>Utilities for easy work with Listener and so on.</td>
+        <td><code>xlib-config</code></td>
+        <td>(COMING SOON) Contains functions for working with configurations.</td>
+    </tr>
+    <tr>
+        <td><code>xlib-plugin</code></td>
+        <td>Contains functions that interact with JavaPlugin.</td>
     </tr>
 </table>
 
-<h3>Usage</h3>
-
+<h3>Add to <code>build.gradle.kts</code></h3>
 ```kotlin
 repositories {
     maven("https://jitpack.io")
 }
 
-// For the plugin on the Minecraft server, use "compileOnly".
-// Note: You'll need to install xLib on your server.
+// If you have installed the XLIB plugin on your server, use 'compileOnly'.
 dependencies {
-    implementation("com.github.alexthegoood.xlib:{artifact}:{version}")
+    implementation("com.github.alexthegoood.xlib:{module}:{version}")
 }
 ```
 
-<h1>Functions & Examples</h1>
+Note: If you want to learn more about the functions and contents of the modules, check the source code.
 
-<h3>Functions</h3>
-<table>
-    <tr><th>Function</th><th>Description</th></tr>
-    <tr>
-        <td><code>JavaPlugin.registerListeners(Listener...)</code></td>
-        <td>Simple Listeners registration in one method.</td>
-    </tr>
-    <tr>
-        <td><code>JavaPlugin.isFolia()</code></td>
-        <td>Checks if the server works on Folia.</td>
-    </tr>
-    <tr>
-        <td><code>Component.replacePattern({String, Pattern}, {String, ComponentLike})</code></td>
-        <td>Replaces pattern in the component to String or ComponentLike.</td>
-    </tr>
-    <tr>
-        <td><code>Component.replaceLiteral(String, {String, ComponentLike})</code></td>
-        <td>Replaces string with a String or ComponentLike.</td>
-    </tr>
-    <tr>
-        <td>
-            <code>Component.serialize(ComponentSerializer)</code><br>
-            <code>String.deserialize(ComponentSerializer)</code><br>
-        </td>
-        <td>Component serialization to/from a string.</td>
-    </tr>
-</table>
-
-<h3>Examples</h3>
+<h1>Examples</h1>
 <details>
     <summary>registerListeners</summary>
 
