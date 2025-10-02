@@ -24,9 +24,9 @@ repositories {
 }
 
 // For the plugin on the Minecraft server, use "compileOnly".
-// Note: You'll need to install BoxyLib on your server.
+// Note: You'll need to install xLib on your server.
 dependencies {
-    implementation("com.github.alexthegoood.boxyLib:{artifact}:{version}")
+    implementation("com.github.alexthegoood.xlib:{artifact}:{version}")
 }
 ```
 

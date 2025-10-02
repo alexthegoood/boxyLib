@@ -4,10 +4,8 @@
  */
 
 plugins {
-    `kotlin-dsl`
+    convention.project
+    convention.publication
 }
 
-dependencies {
-    implementation(lib.kotlin)
-    implementation(lib.shadow)
-}
+dependencies.compileOnly(lib.bundles.adventure)

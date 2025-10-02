@@ -3,11 +3,8 @@
  * that can be found in the LICENSE file.
  */
 
-plugins {
-    `kotlin-dsl`
-}
+package io.github.alexthegoood.xlib
 
-dependencies {
-    implementation(lib.kotlin)
-    implementation(lib.shadow)
-}
+import org.bukkit.plugin.java.JavaPlugin
+
+internal class XLib : JavaPlugin()

@@ -1,7 +1,0 @@
-[versions]
-kotlin = "2.2.20"
-shadow = "9.0.2"
-
-[libraries]
-kotlin-jvm = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
-shadow = { group = "com.gradleup.shadow", name = "shadow-gradle-plugin", version.ref = "shadow" }

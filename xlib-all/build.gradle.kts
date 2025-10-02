@@ -1,0 +1,34 @@
+/*
+ * Copyright 2025 alexthegoood. Use of this source code is governed by the Apache 2.0 license
+ * that can be found in the LICENSE file.
+ */
+
+plugins {
+    convention.project
+    convention.shadow
+    convention.publication
+    alias (lib.plugins.resourceFactory)
+    alias (lib.plugins.runPaper)
+}
+
+repositories.maven("https://repo.papermc.io/repository/maven-public/")
+dependencies {
+    compileOnly(lib.paperServer)
+    api(project(":xlib-adventure"))
+    api(project(":xlib-config"))
+    api(project(":xlib-plugin"))
+}
+
+tasks.shadowJar {
+    archiveClassifier = null
+}
+
+bukkitPluginYaml {
+    name = rootProject.name
+    author = "alexthegoood"
+    version = rootProject.version.toString()
+
+    main = "${rootProject.group}.XLib"
+    apiVersion = lib.versions.server.apiVersion
+    foliaSupported = true
+}

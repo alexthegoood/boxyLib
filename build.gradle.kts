@@ -3,21 +3,5 @@
  * that can be found in the LICENSE file.
  */
 
-group = "io.github.alexthegoood"
-version = "1.1.0"
-
-tasks {
-    withType<Jar> {
-        enabled = false
-    }
-}
-
-allprojects {
-
-    tasks.withType<Jar> {
-        archiveBaseName = "${rootProject.name}-${project.name}"
-        archiveVersion = "${rootProject.version}"
-        archiveClassifier = "java"
-    }
-
-}
+group = "io.github.alexthegoood.xlib"
+version = "2.0.0-SNAPSHOT"

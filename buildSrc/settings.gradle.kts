@@ -4,5 +4,12 @@
  */
 
 dependencyResolutionManagement {
-    versionCatalogs.create("libs").from(files("libs.versions.toml"))
+    repositories.mavenCentral()
+    versionCatalogs.create("lib") {
+        version("kotlin", "2.2.20")
+        version("shadow", "9.2.2")
+
+        library("kotlin", "org.jetbrains.kotlin", "kotlin-gradle-plugin").versionRef("kotlin")
+        library("shadow", "com.gradleup.shadow", "shadow-gradle-plugin").versionRef("shadow")
+    }
 }
