@@ -26,6 +26,7 @@ XLIB simplifies plugin development for Minecraft for beginner developers using K
 </table>
 
 <h3>Add to <code>build.gradle.kts</code></h3>
+
 ```kotlin
 repositories {
     maven("https://jitpack.io")
