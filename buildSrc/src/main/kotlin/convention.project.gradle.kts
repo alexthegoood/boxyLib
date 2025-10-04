@@ -3,28 +3,36 @@
  * that can be found in the LICENSE file.
  */
 
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 
 plugins {
     org.jetbrains.kotlin.jvm
 }
 
+val javaVersion: Int = 21
+
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(javaVersion)
     compilerOptions {
         languageVersion = KotlinVersion.KOTLIN_2_2
         apiVersion = KotlinVersion.KOTLIN_2_2
     }
 }
 
-tasks.jar {
+tasks.kotlinSourcesJar
+
+tasks.withType<AbstractArchiveTask>().configureEach {
     archiveBaseName = project.name
     archiveVersion = rootProject.version.toString()
     archiveClassifier = name
 }
 
-tasks.kotlinSourcesJar {
-    archiveBaseName = project.name
-    archiveVersion = rootProject.version.toString()
-    archiveClassifier = name
+tasks.compileJava {
+    options.encoding = Charsets.UTF_8.name()
+    options.release = javaVersion
+}
+
+tasks.compileKotlin {
+    compilerOptions.jvmTarget = JvmTarget.fromTarget(javaVersion.toString())
 }

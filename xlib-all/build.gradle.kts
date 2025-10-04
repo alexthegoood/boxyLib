@@ -5,22 +5,19 @@
 
 plugins {
     convention.project
-    convention.shadow
     convention.publication
+    com.gradleup.shadow
     alias (lib.plugins.resourceFactory)
     alias (lib.plugins.runPaper)
 }
 
 repositories.maven("https://repo.papermc.io/repository/maven-public/")
+
 dependencies {
     compileOnly(lib.paperServer)
     api(project(":xlib-adventure"))
     api(project(":xlib-config"))
     api(project(":xlib-plugin"))
-}
-
-tasks.shadowJar {
-    archiveClassifier = null
 }
 
 bukkitPluginYaml {
