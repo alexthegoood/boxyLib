@@ -9,9 +9,9 @@ import org.bukkit.event.Listener
 import org.bukkit.plugin.java.JavaPlugin
 
 /**
- * Simple Listeners registration in one method
+ * Simple Listeners registration in one method.
  *
- * @param listeners [Listener] inheritance classes
+ * @param listeners [Listener] inheritance classes.
  */
 fun JavaPlugin.registerListeners(
     vararg listeners: Listener
