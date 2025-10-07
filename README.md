@@ -23,6 +23,11 @@ XLIB simplifies plugin development for Minecraft for beginner developers using K
         <td><code>xlib-plugin</code></td>
         <td>Contains functions that interact with JavaPlugin.</td>
     </tr>
+    <tr>
+        <td><code>xlib-utils</code></td>
+        <td>Contains utilities that can be useful in the development.</td>
+    </tr>
+
 </table>
 
 <h3>Add to <code>build.gradle.kts</code></h3>
