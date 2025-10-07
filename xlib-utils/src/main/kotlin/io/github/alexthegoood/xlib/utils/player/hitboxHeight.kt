@@ -9,7 +9,7 @@ import org.bukkit.attribute.Attribute
 import org.bukkit.entity.Player
 
 /**
- * Returns the highest point of the player based on his [Attribute.SCALE].
+ * Receiving the highest point of the player based on his [Attribute.SCALE].
  *
  * @return The highest point of the player hitbox.
  */
