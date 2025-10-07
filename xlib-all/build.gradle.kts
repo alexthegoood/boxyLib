@@ -6,15 +6,13 @@
 plugins {
     convention.project
     convention.publication
+    convention.paper
     com.gradleup.shadow
-    alias (lib.plugins.resourceFactory)
-    alias (lib.plugins.runPaper)
+    xyz.jpenilla.`resource-factory-bukkit-convention`
+    xyz.jpenilla.`run-paper`
 }
 
-repositories.maven("https://repo.papermc.io/repository/maven-public/")
-
 dependencies {
-    compileOnly(lib.paperServer)
     api(project(":xlib-adventure"))
     api(project(":xlib-config"))
     api(project(":xlib-plugin"))
@@ -26,6 +24,6 @@ bukkitPluginYaml {
     version = rootProject.version.toString()
 
     main = "${rootProject.group}.XLib"
-    apiVersion = lib.versions.server.apiVersion
+    apiVersion = "1.21.8"
     foliaSupported = true
 }

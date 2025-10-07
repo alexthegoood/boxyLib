@@ -6,7 +6,6 @@
 plugins {
     convention.project
     convention.publication
+    convention.paper
 }
 
-repositories.maven("https://repo.papermc.io/repository/maven-public/")
-dependencies.compileOnly(lib.paperServer)
