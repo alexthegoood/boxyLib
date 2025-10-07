@@ -10,4 +10,7 @@ plugins {
 dependencies {
     implementation(lib.kotlin)
     implementation(lib.shadow)
+    implementation(lib.resourceFactory)
+    implementation(lib.runPaper)
+    implementation(lib.paperWeight)
 }
