@@ -16,6 +16,7 @@ dependencies {
     api(project(":xlib-adventure"))
     api(project(":xlib-config"))
     api(project(":xlib-plugin"))
+    api(project(":xlib-utils"))
 }
 
 bukkitPluginYaml {
